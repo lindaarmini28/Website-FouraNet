@@ -1,0 +1,27 @@
+/* login.css */
+
+.layout-default {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.signin {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-brand h5 {
+  font-size: 1.8rem; /* Perbesar font pada header */
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .header-brand h5 {
+    font-size: 1.4rem;
+    text-align: center;
+    padding-left: 0; /* Rata kiri hanya di desktop */
+  }
+}
