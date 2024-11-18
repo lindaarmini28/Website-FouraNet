@@ -1,8 +1,6 @@
-// src/components/Login.jsx
-
 import { useState } from "react";
-import { Layout, Button, Row, Col, Typography, Form, Input } from "antd";
-import Logo from "../assets/Logo_Aplikasi.png"; // Ubah sesuai lokasi logo
+import { Layout, Button, Row, Col, Typography, Form, Input} from "antd";
+import Logo from "../assets/logo-lengkap.png"; // Ubah sesuai lokasi logo
 import "./login.css"; // Pastikan CSS tambahan disertakan
 import { useNavigate } from "react-router-dom";
 
@@ -27,22 +25,21 @@ const LoginPage = () => {
         </div>
       </Header>
       <Content className="signin login-container" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <Row justify="center" style={{ width: "100%", maxWidth: "1200px", padding: "4rem 0" }}>
+        <Row
+          justify="center"
+          align="middle" // Menyelaraskan kolom secara vertikal
+          style={{ width: "100%", maxWidth: "1200px", padding: "4rem 0" }}
+        >
           <Col
             xs={22}
             md={12}
             lg={10}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              paddingBottom: "2rem",
-            }}
+            className="logo-container" // Tambahkan kelas ini untuk styling
           >
-            <img src={Logo} alt="Logo" style={{ maxWidth: "80%", marginBottom: "20px" }} />
+            <img src={Logo} alt="Logo" style={{ maxWidth: "90%" }} />
           </Col>
           <Col xs={24} md={16} lg={10}>
-            <Title className="mb-15" level={3}>Sign In</Title>
+            <Title className="mb-15" level={2} style={{ color: "#031779" }}>Sign In</Title>
             <Form onFinish={handleLogin} layout="vertical" style={{ maxWidth: "500px", margin: "0 auto" }}>
               <Form.Item
                 label="Username"
@@ -70,7 +67,7 @@ const LoginPage = () => {
                 <Button
                   type="primary"
                   htmlType="submit"
-                  style={{ width: "100%", padding: "0.8rem" }}
+                  style={{ width: "100%", padding: "0.8rem", color: username && password ? "#031779" : "#b0b0b0", }}
                   disabled={!username || !password}
                 >
                   SIGN IN
@@ -80,7 +77,7 @@ const LoginPage = () => {
           </Col>
         </Row>
       </Content>
-      <Footer style={{ textAlign: "center", position: "sticky", bottom: 0 }}>
+      <Footer style={{ textAlign: "center", position: "sticky", bottom: 0, color: "#031779" }}>
         Copyright © 2024 FouraNet
       </Footer>
     </Layout>
