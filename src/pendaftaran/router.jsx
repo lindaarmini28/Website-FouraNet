@@ -8,9 +8,9 @@ const { Option } = Select;
 const RegistrasiRouter = () => {
   // Sample data for the table
   const dataSource = [
-    { key: '1', namaMotor: 'mio z', merk: 'yamaha' },
-    { key: '2', namaMotor: 'satria F', merk: 'suzuki' },
-    { key: '3', namaMotor: 'supra x 125', merk: 'honda' },
+    { key: '1', kodeRouter: 'RRP1', kodePanel: 'PnRP1', lokasitambahan: 'Dekat Ruang 1' },
+    { key: '2', kodeRouter: 'RHS1', kodePanel: 'PnHS1', lokasitambahan: 'Di Sebelah Kiri Tangga Utama' },
+    { key: '3', kodeRouter: 'RHS2', kodePanel: 'PnHS2', lokasitambahan: 'Dekat Koridor Utama' },
   ];
 
   // Columns configuration for the table
@@ -21,14 +21,19 @@ const RegistrasiRouter = () => {
       key: 'key',
     },
     {
-      title: 'Nama Motor',
-      dataIndex: 'namaMotor',
-      key: 'namaMotor',
+      title: 'Kode Router',
+      dataIndex: 'kodeRouter',
+      key: 'kodeRouter',
     },
     {
-      title: 'Nama Merk',
-      dataIndex: 'merk',
-      key: 'merk',
+      title: 'Kode Panel',
+      dataIndex: 'kodePanel',
+      key: 'kodePanel',
+    },
+    {
+      title: 'Lokasi Tambahan',
+      dataIndex: 'lokasitambahan',
+      key: 'lokasitambahan',
     },
     {
       title: 'Actions',
@@ -57,13 +62,13 @@ const RegistrasiRouter = () => {
       {/* Input fields */}
       <div style={{ display: 'flex', marginBottom: '20px' }}>
         <Input
-          placeholder="Nama Motor"
+          placeholder="Router"
           style={{ width: '200px', marginRight: '10px' }}
         />
-        <Select placeholder="Pilih Merk" style={{ width: '200px', marginRight: '10px' }}>
-          <Option value="yamaha">Yamaha</Option>
-          <Option value="suzuki">Suzuki</Option>
-          <Option value="honda">Honda</Option>
+        <Select placeholder="Kode Panel" style={{ width: '200px', marginRight: '10px' }}>
+          <Option value="yamaha">PnN1</Option>
+          <Option value="suzuki">PnN2</Option>
+          <Option value="honda">PnSH1</Option>
         </Select>
         <Button type="primary">Save</Button>
       </div>

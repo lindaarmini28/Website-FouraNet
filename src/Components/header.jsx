@@ -98,7 +98,7 @@ function Header({
       <Row gutter={[24, 0]}>
         <Col span={24} md={8}>
           
-          <div>John Doe</div>
+          <div>Admin</div>
         </Col>
         <Col span={24} md={16} className="header-control">
           <Button type="link" onClick={showDrawer}>

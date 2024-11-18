@@ -11,7 +11,7 @@ const items = [
     key: '1',
     icon: <AppstoreOutlined />,
     label: (
-      <NavLink to="/dashboard">
+      <NavLink to="/Halaman1">
         <span className="label">Dashboard</span>
       </NavLink>
     ),
@@ -29,23 +29,33 @@ const items = [
       },
       {
         key: '4',
-        label: 'Registrasi Server',
+        label:  (
+         <NavLink to="/regis-server">Registrasi Server</NavLink> 
+        ),
       },
       {
         key: '5',
-        label: 'Registrasi Panel',
+        label:  (
+          <NavLink to="/regis-panel">Registrasi Panel</NavLink> 
+         ),
       },
       {
         key: '6',
-        label: 'Registrasi Router',
+        label:  (
+          <NavLink to="/regis-router">Registrasi Router</NavLink> 
+         ),
       },
       {
         key: '7',
-        label: 'Registrasi Switch',
+        label:  (
+          <NavLink to="/regis-switch">Registrasi Switch</NavLink> 
+         ),
       },
       {
         key: '8',
-        label: 'Registrasi Alat Perangkat',
+        label:  (
+          <NavLink to="/regis-alat">Registrasi Alat Perangkat</NavLink> 
+         ),
       },
     ],
   },

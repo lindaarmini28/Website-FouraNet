@@ -8,9 +8,9 @@ const { Option } = Select;
 const RegistrasiAlat = () => {
   // Sample data for the table
   const dataSource = [
-    { key: '1', namaMotor: 'mio z', merk: 'yamaha' },
-    { key: '2', namaMotor: 'satria F', merk: 'suzuki' },
-    { key: '3', namaMotor: 'supra x 125', merk: 'honda' },
+    { key: '1', namaperangkat: 'WifiRP1', kodeSwitch: 'SwRP1' },
+    { key: '2', namaperangkat: 'CctvHS1', kodeSwitch: 'SwHS1' },
+    { key: '3', namaperangkat: 'TeleponHS1', kodeSwitch: 'SwHS3' },
   ];
 
   // Columns configuration for the table
@@ -21,14 +21,14 @@ const RegistrasiAlat = () => {
       key: 'key',
     },
     {
-      title: 'Nama Motor',
-      dataIndex: 'namaMotor',
-      key: 'namaMotor',
+      title: 'Nama Pernagkat',
+      dataIndex: 'namaperangkat',
+      key: 'namaperangkat',
     },
     {
-      title: 'Nama Merk',
-      dataIndex: 'merk',
-      key: 'merk',
+      title: 'Switch',
+      dataIndex: 'kodeSwitch',
+      key: 'kodeSwitch',
     },
     {
       title: 'Actions',
@@ -60,7 +60,7 @@ const RegistrasiAlat = () => {
           placeholder="Nama Motor"
           style={{ width: '200px', marginRight: '10px' }}
         />
-        <Select placeholder="Pilih Merk" style={{ width: '200px', marginRight: '10px' }}>
+        <Select placeholder="Switch" style={{ width: '200px', marginRight: '10px' }}>
           <Option value="yamaha">Yamaha</Option>
           <Option value="suzuki">Suzuki</Option>
           <Option value="honda">Honda</Option>

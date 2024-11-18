@@ -120,7 +120,7 @@ function MainLayout({ children }) {
               handleSidenavColor={handleSidenavColor}
               handleSidenavType={handleSidenavType}
               handleFixedNavbar={handleFixedNavbar}
-            />
+            /> 
           </AntHeader>
         )}
         <Content>{children}</Content>

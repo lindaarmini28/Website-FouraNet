@@ -24,9 +24,8 @@ function Footer() {
             © 2024, made with
             {<HeartFilled />} by
             <a href="#pablo" className="font-weight-bold" target="_blank">
-              WebfmSI.com
+              FauraNet.com 
             </a>
-            for a better point of sales management.
           </div>
         </Col>
       </Row>

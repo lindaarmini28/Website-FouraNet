@@ -8,9 +8,9 @@ const { Option } = Select;
 const RegistrasiTempat = () => {
   // Sample data for the table
   const dataSource = [
-    { key: '1', namaMotor: 'mio z', merk: 'yamaha' },
-    { key: '2', namaMotor: 'satria F', merk: 'suzuki' },
-    { key: '3', namaMotor: 'supra x 125', merk: 'honda' },
+    { key: '1', namaperusahaan: 'Rumah Putri', alamat: 'Jl. Kerobokan, Singaraja' },
+    { key: '2', namaperusahaan: 'Hotel Sejahtera', alamat: 'Jl. Manggis, Tejakula' },
+    { key: '3', namaperusahaan: 'LaoNet', alamat: 'Jl. Banyuasri, Singaraja' },
   ];
 
   // Columns configuration for the table
@@ -21,14 +21,14 @@ const RegistrasiTempat = () => {
       key: 'key',
     },
     {
-      title: 'Nama Motor',
-      dataIndex: 'namaMotor',
-      key: 'namaMotor',
+      title: 'Nama Perusahaan',
+      dataIndex: 'namaperusahaan',
+      key: 'namaperusahaan',
     },
     {
-      title: 'Nama Merk',
-      dataIndex: 'merk',
-      key: 'merk',
+      title: 'Alamat',
+      dataIndex: 'alamat',
+      key: 'alamat',
     },
     {
       title: 'Actions',
@@ -57,14 +57,11 @@ const RegistrasiTempat = () => {
       {/* Input fields */}
       <div style={{ display: 'flex', marginBottom: '20px' }}>
         <Input
-          placeholder="Nama Motor"
+          placeholder="Nama Perusahaan"
           style={{ width: '200px', marginRight: '10px' }}
         />
-        <Select placeholder="Pilih Merk" style={{ width: '200px', marginRight: '10px' }}>
-          <Option value="yamaha">Yamaha</Option>
-          <Option value="suzuki">Suzuki</Option>
-          <Option value="honda">Honda</Option>
-        </Select>
+        <Input placeholder="Alamat" style={{ width: '200px', marginRight: '10px' }}
+        />
         <Button type="primary">Save</Button>
       </div>
 

@@ -26,8 +26,10 @@ const Dashboard = () => {
     );
 
     const handleCardClick = (card) => {
-        navigate(`/detail/${card.id}`);
+        navigate(`/detail/${card.id}`);  // Make sure the URL string is wrapped in backticks
     };
+    
+
 
     return (
         <div className="dashboard-container">

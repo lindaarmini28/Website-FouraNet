@@ -12,8 +12,9 @@ import RegistrasiTempat from './pendaftaran/tempat';
 import RegistrasiServer from './pendaftaran/server';
 import RegistrasiPanel from './pendaftaran/panel';
 import RegistrasiRouter from './pendaftaran/router';
-import RegistrasiSwitch from './pendaftaran/RegistrasiSwitch';
+import RegistrasiSwitch from './pendaftaran/Switch';
 import RegistrasiAlat from './pendaftaran/alat';
+import Halaman1 from './Dashboard/Halaman1';
 
 const App = () => {
     return (
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/" element={<LoginPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/dashboard" element={<PrivateRoute component={<Dashboard />} />} />
+            <Route path="/Halaman1" element={<PrivateRoute component={<Halaman1 />} />} />
             <Route path="/detail/:id" element={<PrivateRoute component={<DetailPage />} />} />
             <Route path="/pendaftaran" element={<PrivateRoute component={<Pendaftaran/>} />} />
             <Route path="/pagependaftaran" element={<PagePendaftaran />} /> 

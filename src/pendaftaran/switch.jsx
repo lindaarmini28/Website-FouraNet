@@ -8,9 +8,10 @@ const { Option } = Select;
 const RegistrasiSwitch = () => {
   // Sample data for the table
   const dataSource = [
-    { key: '1', namaMotor: 'mio z', merk: 'yamaha' },
-    { key: '2', namaMotor: 'satria F', merk: 'suzuki' },
-    { key: '3', namaMotor: 'supra x 125', merk: 'honda' },
+    { key: '1', kodeSwitch: 'SwRP1', kodeRouter: 'RRP1', lokasitambahan: 'Dekat Router' },
+    { key: '2', kodeSwitch: 'SwHS1', kodeRouter: 'RHS1', lokasitambahan: 'Dekat Router' },
+    { key: '3', kodeSwitch: 'SwHS2', kodeRouter: 'RHS1', lokasitambahan: 'Dekat lift' },
+    { key: '4', kodeSwitch: 'SwHS3', kodeRouter: 'RHS2', lokasitambahan: 'Lemari utilitas' },
   ];
 
   // Columns configuration for the table
@@ -21,14 +22,19 @@ const RegistrasiSwitch = () => {
       key: 'key',
     },
     {
-      title: 'Nama Motor',
-      dataIndex: 'namaMotor',
-      key: 'namaMotor',
+      title: 'Kode Switch',
+      dataIndex: 'kodeSwitch',
+      key: 'kodeSwitch',
     },
     {
-      title: 'Nama Merk',
-      dataIndex: 'merk',
-      key: 'merk',
+      title: 'Router',
+      dataIndex: 'kodeRouter',
+      key: 'kodeRouter',
+    },
+    {
+      title: 'Lokasi Tambahan',
+      dataIndex: 'lokasitambahan',
+      key: 'lokasitambahan',
     },
     {
       title: 'Actions',
@@ -57,10 +63,10 @@ const RegistrasiSwitch = () => {
       {/* Input fields */}
       <div style={{ display: 'flex', marginBottom: '20px' }}>
         <Input
-          placeholder="Nama Motor"
+          placeholder="Switch"
           style={{ width: '200px', marginRight: '10px' }}
         />
-        <Select placeholder="Pilih Merk" style={{ width: '200px', marginRight: '10px' }}>
+        <Select placeholder="Router" style={{ width: '200px', marginRight: '10px' }}>
           <Option value="yamaha">Yamaha</Option>
           <Option value="suzuki">Suzuki</Option>
           <Option value="honda">Honda</Option>

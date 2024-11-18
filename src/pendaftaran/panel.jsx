@@ -8,9 +8,9 @@ const { Option } = Select;
 const RegistrasiPanel = () => {
   // Sample data for the table
   const dataSource = [
-    { key: '1', namaMotor: 'mio z', merk: 'yamaha' },
-    { key: '2', namaMotor: 'satria F', merk: 'suzuki' },
-    { key: '3', namaMotor: 'supra x 125', merk: 'honda' },
+    { key: '1', kodePanel: 'PnRP1', kodeServer: 'SvRP1', lokasitambahan: 'Lantai 1' },
+    { key: '2', kodePanel: 'PnHS1', kodeServer: 'SvHS1', lokasitambahan: 'Pojok Lantai 2' },
+    { key: '3', kodePanel: 'PnHS2', kodeServer: 'SvHS2', lokasitambahan: 'Pojok Lantai 3' },
   ];
 
   // Columns configuration for the table
@@ -21,14 +21,19 @@ const RegistrasiPanel = () => {
       key: 'key',
     },
     {
-      title: 'Nama Motor',
-      dataIndex: 'namaMotor',
-      key: 'namaMotor',
+      title: 'Panel',
+      dataIndex: 'kodePanel',
+      key: 'kodePanel',
     },
     {
-      title: 'Nama Merk',
-      dataIndex: 'merk',
-      key: 'merk',
+      title: 'Server',
+      dataIndex: 'kodeServer',
+      key: 'kodeServer',
+    },
+    {
+      title: 'Lokasi Tambahan',
+      dataIndex: 'lokasitambahan',
+      key: 'lokasitambahan',
     },
     {
       title: 'Actions',
@@ -57,14 +62,16 @@ const RegistrasiPanel = () => {
       {/* Input fields */}
       <div style={{ display: 'flex', marginBottom: '20px' }}>
         <Input
-          placeholder="Nama Motor"
+          placeholder="Panel"
           style={{ width: '200px', marginRight: '10px' }}
         />
-        <Select placeholder="Pilih Merk" style={{ width: '200px', marginRight: '10px' }}>
-          <Option value="yamaha">Yamaha</Option>
-          <Option value="suzuki">Suzuki</Option>
-          <Option value="honda">Honda</Option>
+        <Select placeholder="Server" style={{ width: '200px', marginRight: '10px' }}>
+          <Option value="yamaha">SvN1</Option>
+          <Option value="suzuki">SvHS1</Option>
+          <Option value="honda">SvHS2</Option>
         </Select>
+        <Input placeholder="Lokasi Tambahan" style={{ width: '200px', marginRight: '10px' }}
+        />
         <Button type="primary">Save</Button>
       </div>
 
